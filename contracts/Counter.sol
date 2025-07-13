@@ -1,11 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.28;
 
-contract Counter {
+contract Counter{
     uint256 public count;
+    string public author;
 
     constructor() {
         count = 0;
+        author = "Thaina Cassiano";
     }
 
     function increment() public {
@@ -18,7 +20,12 @@ contract Counter {
         }
     }
 
+    function reset() public {
+        count = 0;
+    }
+
     function getCount() public view returns (uint256) {
         return count;
     }
-}
+
+} //fim do Counter
